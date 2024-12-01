@@ -59,5 +59,21 @@
       <div>日幣<input type="text" v-model="jpy" /></div>
       <div>美金<input type="text" v-model="usd" /></div>
     </div>
+
+    <div id="app9">
+      <button v-bind:disabled="isBtnDisabled">click me</button>
+    </div>
+
+    <div id="app10">
+      <input type="radio" value="1" v-model="picked" />
+      <input type="radio" value="2" v-model="picked" />
+      <span>{{picked}}</span>
+    </div>
+
+    <div id="app11">
+      <input type="checkbox" value="new" v-model="picked" />
+      <input type="checkbox" value="old" v-model="picked" />
+      <span>{{picked}}</span>
+    </div>
   </body>
 </html>

@@ -144,4 +144,33 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
   im.mount('#app8')
+
+  const jm = createApp({
+    data() {
+      return {
+        isBtnDisabled: true,
+      }
+    },
+  })
+  jm.mount('#app9')
+
+  im.mount('#app8')
+
+  const km = createApp({
+    data() {
+      return {
+        picked: 1,
+      }
+    },
+  })
+  km.mount('#app10')
+
+  const lm = createApp({
+    data() {
+      return {
+        picked: [],
+      }
+    },
+  })
+  lm.mount('#app11')
 })
