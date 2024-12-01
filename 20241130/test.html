@@ -17,7 +17,7 @@
         </li>
         <li>單價: {{ price }}</li>
         <li>數量: {{ quantity }}</li>
-        <li>總價: {{ price * quantity }}</li>
+        <li>總價: {{ subtotal() }}</li>
       </ul>
     </div>
 
@@ -27,5 +27,20 @@
     </ul>
 
     <div id="app3"></div>
+
+    <ul id="app4">
+      <li>單價: {{ price }}</li>
+      <li>數量: {{ quantity }}</li>
+      <li>總價: {{ subtotal() }}</li>
+    </ul>
+    <ul id="app5">
+      <li>單價: {{ price }}</li>
+      <li>數量: {{ quantity }}</li>
+      <li>總價: {{ subtotal1 }}</li>
+    </ul>
+    <div id="app6">
+      <span>預備兌換日幣：</span><input type="number" v-model="jpy" />
+      <div>需要{{ totalmoney }}台幣</div>
+    </div>
   </body>
 </html>
