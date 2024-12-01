@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const { createApp, ref } = Vue
 
-  const vm = createApp({
+  const am = createApp({
     data() {
       return {
         price: 100,
@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
-  vm.mount('#app')
+  am.mount('#app')
 
-  const cm = createApp({
+  const bm = createApp({
     setup() {
       const message = ref('Hello vue!')
       const noname = ref('YAYA')
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
   })
-  cm.mount('#app1')
+  bm.mount('#app1')
 
-  const xm = createApp({
+  const cm = createApp({
     data() {
       return {
         name: 11,
@@ -32,5 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
-  xm.mount('#app2')
+  cm.mount('#app2')
+
+  const dm = createApp({
+    template: `<div>2025年1月發售：{{new_game}}</div>`,
+    data() {
+      return {
+        name: 11,
+        new_game: 'monster hunter',
+      }
+    },
+  })
+
+  dm.mount('#app3')
 })
