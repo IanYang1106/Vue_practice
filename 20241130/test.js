@@ -95,4 +95,53 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
   gm.mount('#app6')
+
+  const hm = createApp({
+    data() {
+      return {
+        twd: 0.2204,
+        jpy: 1,
+      }
+    },
+    methods: {
+      totalmoney1: function () {
+        return (this.jpy = Number.parseFloat(Number(this.twd) / 0.2204).toFixed(
+          4
+        ))
+      },
+      totalmoney2: function () {
+        return (this.twd = Number.parseFloat(Number(this.jpy) * 0.2204).toFixed(
+          4
+        ))
+      },
+    },
+  })
+  hm.mount('#app7')
+
+  const im = createApp({
+    data() {
+      return {
+        twd: 0.2204,
+      }
+    },
+    computed: {
+      jpy: {
+        get() {
+          return Number.parseFloat(Number(this.twd) / 0.2204).toFixed(4)
+        },
+        set(val) {
+          this.twd = Number.parseFloat(Number(val) * 0.2204).toFixed(4)
+        },
+      },
+      usd: {
+        get() {
+          return Number.parseFloat(Number(this.twd) / 32.73).toFixed(4)
+        },
+        set(val) {
+          this.twd = Number.parseFloat(Number(val) * 32.73).toFixed(4)
+        },
+      },
+    },
+  })
+  im.mount('#app8')
 })

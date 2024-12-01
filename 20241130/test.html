@@ -42,5 +42,22 @@
       <span>預備兌換日幣：</span><input type="number" v-model="jpy" />
       <div>需要{{ totalmoney }}台幣</div>
     </div>
+
+    <div id="app7">
+      <p>1日幣 = 0.2204台幣</p>
+      <div>
+        台幣<input type="text" v-model="twd" v-on:input="totalmoney1" />
+      </div>
+      <div>
+        日幣<input type="text" v-model="jpy" v-on:input="totalmoney2" />
+      </div>
+    </div>
+
+    <div id="app8">
+      <p>1日幣 = 0.2204台幣 = 0.0067美金</p>
+      <div>台幣<input type="text" v-model="twd" /></div>
+      <div>日幣<input type="text" v-model="jpy" /></div>
+      <div>美金<input type="text" v-model="usd" /></div>
+    </div>
   </body>
 </html>
