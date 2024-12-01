@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="test.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app1">{{message}}</div>
+    <div id="app">
+      <ul>
+        <li>
+          <label>數量:</label>
+          <input type="number" v-model="quantity" />
+        </li>
+        <li>單價: {{ price }}</li>
+        <li>數量: {{ quantity }}</li>
+        <li>總價: {{ price * quantity }}</li>
+      </ul>
+    </div>
+
+    <ul id="app2">
+      <input type="text" v-model="name" />
+      <input type="text" v-model="name" />
+    </ul>
+  </body>
+</html>

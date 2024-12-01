@@ -1,0 +1,31 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+
+  // 啟用自動格式化
+  "editor.formatOnSave": true,
+
+  // 為不同文件指定格式化工具
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  // Black 格式化配置
+  "python.formatting.provider": "black",
+
+  // Prettier 配置
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+
+  "prettier.ignorePath": ".prettierignore"
+}
